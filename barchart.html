@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chartStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <title>Chart</title>
+</head>
+
+<body>
+
+  <header>
+    <h2>|| Chart Plotter ||</h2>
+  </header>
+
+  <div id="chartInput">
+
+    <form action="" method="GET" id="submitForm">
+      <div>Please fill in the following inputs to plot your chart</div>
+
+      <label for="chartType">Chart Type</label>
+      <select name="chartType" id="chartType" required>
+        <option value="horizontal">Horizontal</option>
+        <option value="column">Column</option>
+        <option value="horizontal column">Horizontal Column</option>
+        <option value="pie">Pie</option>
+        <option value="line">Line</option>
+        <option value="radar">Radar</option>
+      </select>
+
+
+      <label for="xaxis">X Axis</label>
+      <input name="xaxis" type="text" id="xaxis" required>
+
+      <label for="yaxis">Y Axis</label>
+      <input name="yaxis" type="text" id="yaxis" required>
+      <br>
+      <button id="add">Add</button>
+
+
+      <br>
+      <input type="submit" value="Plot">
+    </form>
+
+
+  </div>
+
+  <div id="chart">
+
+  </div>
+
+
+  <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+  <script src="barchart.js"></script>
+
+</body>
+
+</html>
